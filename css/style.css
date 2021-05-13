@@ -1,4 +1,5 @@
 body{
+    min-width: 1579.17px;
     font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 /* css cho header - anh em cop từ đoạn này*/
@@ -144,14 +145,25 @@ body{
 }
 .imgSmall{
     width: 100%;
-    border: 1px solid rgb(255, 225, 225);
+    /* border: 1px solid rgb(255, 225, 225); */
     margin-bottom: 10px;
+    cursor: pointer;
 }
+.imgBig img{
+    transition: all 1s;
+    width: 100%;
+    
+}
+.imgBig:hover img{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); 
+}
+
 .bigImg{
     width: 85%;
 }
 .imgBig{
-    /* border: 1px solid black; */
+    overflow: hidden;
 }
 .topRightContainer{
     width: 40%;
@@ -171,6 +183,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
 }
+
 .nameProduct > h1{
     margin-bottom: 16px;
     font-size: 40px;
@@ -195,10 +208,12 @@ body{
     color: gray;
 }
 .star{
-    display: inline-block;
+    display: flex;
 }
 .star i{
     color: black;
+    /* display: flex; */
+    cursor: pointer;
 }
 .describe{
     /* font-size: auto; */
@@ -214,28 +229,54 @@ body{
 /* Hộp số lượng */
 .twoBox{
     display: flex;
+   
 }
 .box{
-    border: 1px solid black;
+    border: 1px solid rgb(255, 234, 234);
     display: flex;
     text-align: center;
-    height: 50px;
+    /* height: 50px; */
     margin-right: 10px;
+    align-items: center;
+    width: 120px;
+    justify-content: space-between;
+    background-color: white;
 }
-.box button{
+ .box div{
     border: none;
     background-color: white;
+    /* font-size: 30px; */
+    width: calc(100%/3);
+    height: 100%;
+}
+.box p{
+    margin: 4.5px 0px;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
     font-size: 25px;
+    cursor: pointer;
+    /* border: 1px solid blue; */
 }
 .total{
-    width: 45px;
+    width: 40px;
+    height: 40px;
     text-align: center;
     border: none;
     background-color: white;
-    font-size: 25px;
+    line-height: 40px;
+    font-size: 20px;
 }
 .total:focus{
     outline: none;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }
 .addToCart button{
     height: 50px;
@@ -246,19 +287,7 @@ body{
     font-size: 15px;
     border: none;
 }
-.addToWishList {
-    margin-left: 109px;
-    margin-top: 10px;
-}
-.addToWishList button{
-    background-color: gray;
-    color: white;
-    cursor: pointer;
-    font-size: 15px;
-    border: none;
-    height: 40px;
-    padding: 0px 108px;
-}
+
 
 /* css .hastag */
 
@@ -363,6 +392,7 @@ body{
 .titleDes ul li{
     color: #686868;
     font-size: 15px;
+    margin-left: 50px;
 }
 
 /* Additional information */
@@ -427,20 +457,29 @@ td{
     bottom: 80px;
     left: 0;
     opacity: 0;
+    overflow: hidden;
 }
 .boxIcon div{
     padding: 8px 15px;
-    border: 1px solid rgb(255, 215, 215);
+    border: 1px solid rgb(253, 241, 241);
     background-color: whitesmoke;
     cursor: pointer;
+    box-shadow: 0 0 3px  rgb(228, 228, 228);
+}
+.boxIcon :hover{
+    transform: scale(1.1);
 }
 .boxIcon :nth-child(1){
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
 }
+.boxIcon > div > i:hover {
+    font-family: FontAwesome;
+    content: "\f004";
+}
 .boxIcon :nth-child(2){
-    border-top: 1px solid rgb(255, 215, 215);
-    border-bottom: 1px solid rgb(255, 215, 215);
+    border-top: 1px solid rgb(253, 241, 241);
+    border-bottom: 1px solid rgb(253, 241, 241);
 }
 .boxIcon :nth-child(3){
     border-top-right-radius: 3px;
@@ -452,7 +491,7 @@ td{
     align-items: center; 
 }
 .icon i {
-    font-size: 20px;  
+    font-size: 17px;  
     align-items: center; 
 }
 /* CSS Button hiện lên khi hover ảnh */

@@ -62,22 +62,30 @@
                         <!-- 4 Ảnh nhỏ -->
                         <div class="smallImg">
                             <div class="imgSmall">
-                                <img src="./Img_Chi_Tiết_SP/1.webp" alt="">
+                                <div id="anh1">
+                                    <img src="./Img_Chi_Tiết_SP/1.webp" alt="" id="thumb1" onclick="click1()">
+                                </div>
                             </div>
                             <div class="imgSmall">
-                                <img src="./Img_Chi_Tiết_SP/2.webp" alt="">
+                                <div id="anh2">
+                                    <img src="./Img_Chi_Tiết_SP/2.webp" alt="" id="thumb2" onclick="click2()">
+                                </div>
                             </div>
                             <div class="imgSmall">
-                                <img src="./Img_Chi_Tiết_SP/3.webp" alt="">
+                                <div id="anh3">
+                                    <img src="./Img_Chi_Tiết_SP/3.webp" alt="" id="thumb3" onclick="click3()">
+                                </div>
                             </div>
                             <div class="imgSmall">
-                                <img src="./Img_Chi_Tiết_SP/4.webp" alt="">
+                                <div id="anh4">
+                                    <img src="./Img_Chi_Tiết_SP/4.webp" alt="" id="thumb4" onclick="click4()">
+                                </div>
                             </div>
                         </div>
                         <!-- Ảnh lớn -->
                         <div class="bigImg">
                             <div class="imgBig">
-                                <img src="./Img_Chi_Tiết_SP/1.webp" alt="">
+                                <img src="./Img_Chi_Tiết_SP/1.webp" alt="" id="firstImg">
                             </div>
                         </div>
 
@@ -111,13 +119,23 @@
                                         Off
                                     </span>
                                 </p>
-                                <p class="star">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </p>
+                                <div class="star" id="star">
+                                    <div id="star1" onclick="vote1()">
+                                        <i class="far fa-star" ></i>
+                                    </div>
+                                    <div id="star2" onclick="vote2()">
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div id="star3" onclick="vote3()">
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div id="star4" onclick="vote4()">
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div id="star5" onclick="vote5()">
+                                        <i class="far fa-star"></i>
+                                    </div>                                    
+                                </div>
                                 <p class="describe">
                                     A hanger that could correspond to the landmark’s style and improve its inhabitants
                                     daily
@@ -129,21 +147,23 @@
                                     <div class="threeButton">
                                         <div class="twoBox">
                                             <div class="box">
-                                                <button class="sub" onclick="tru()">
-                                                    -
-                                                </button>
-                                                <input type="text" class="total" id="sum" value="1">
-                                                <button class="add" onclick="cong()">
-                                                    +
-                                                </button>
+                                                <div class="minus">
+                                                    <p class="sub" onclick="tru()">
+                                                        -
+                                                    </p>
+                                                </div>
+                                                <input type="number" class="total" id="sum" value="1" >
+                                                <div class="plus">
+                                                    <p class="add" onclick="cong()">
+                                                        +
+                                                    </p>
+                                                </div>
                                             </div>
                                             <div class="addToCart">
                                                 <button type="submit">Add To Cart</button>
                                             </div>
                                         </div>
-                                        <div class="addToWishList">
-                                            <button type="submit">Add To Wishlist</button>
-                                        </div>
+
                                     </div>
                                 </form>
                             </div>
